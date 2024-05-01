@@ -3,7 +3,7 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
@@ -37,7 +37,7 @@ module.exports = () => {
         description: "Progressive Web App text editor",
         background_color: "#ffffff",
         orientation: "portrait",
-          display: "standalone",
+        display: "standalone",
         fingerprints: false,
         icons: [
           {
@@ -49,9 +49,7 @@ module.exports = () => {
         ],
       }),
       new CopyWebpackPlugin({
-        patterns: [
-          { from: './favicon.ico', to: 'dist' }
-        ],
+        patterns: [{ from: "./favicon.ico", to: "./" }],
       }),
     ],
 
